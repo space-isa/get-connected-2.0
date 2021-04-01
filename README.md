@@ -17,7 +17,7 @@ GetConnected 2.0 is an updated platform designed to create both a resouce hub fo
 ---
 
 ## Motivation 
-As a data engineering project, this code primarily showcases how to transform raw input data (leaving the original source unchanged) and export it to a given destination. In a scaled-up version of this pipeline, data would be downloaded from a database and the transformed data directly uploaded to a database or a data warehouse. This would be a complete Extract-Transform-Load (ETL) process.
+As a data engineering project, this code currently showcases how to acquire (via web-scraping) and transform raw input data (leaving the original source unchanged) and export it to a given destination. As an ongoing project, transformed data will be uploaded to a database (completing the ETL process), then vizualized using Tableau.
 
 ### Project requirements
 

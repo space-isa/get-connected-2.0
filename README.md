@@ -1,6 +1,7 @@
 # get-connected-2.0
 
 GetConnected 2.0 is an updated platform designed to create both a resouce hub for the community members of Manhattan's Lower East Side, as well as to curate a list of free, accessible wi-fi hubs available thorugh the New York Public Library systems as well as New York Public Parks.
+![alt text](https://github.com/space-isa/get-connected-2.0/blob/main/docs/images/test-mysql-tableau-connect.png?raw=true)
 
 ---
 ## Table of Contents 

@@ -57,6 +57,9 @@ Install before use:
 ## How to use? 
 
 --- 
+Feel free to fork this repo! 
+
+In ```/BPL_hotspots/src/``` you'll find the script ```find_bpl_hotspots.py```. Running this script will access and scrape and store data from NY Public Libraries currently participating in the [Bklyn Reach](https://www.bklynlibrary.org/reach/) Wi-Fi program.
 
 ## Features 
 

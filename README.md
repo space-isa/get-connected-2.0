@@ -1,24 +1,24 @@
 # get-connected-2.0
 
-GetConnected 2.0 is an updated platform designed to create both a resouce hub for the community members of Manhattan's Lower East Side, as well as to curate a list of free, accessible wi-fi hubs available through the New York Public Library systems as well as New York Public Parks.
+A project that curates information from the web related to free Wi-Fi and libray-based programs available to the community members of Manhattan's Lower East Side.  
 ![alt text](https://github.com/space-isa/get-connected-2.0/blob/main/docs/images/test-mysql-tableau-connect.png?raw=true)
 
 ---
 ## Table of Contents 
 1. [Motivation](#motivation) 
-2. [Solution Approach](#solution-approach)
-3. [Requirements](#requirements)
-4. [How to use?](#how-to-use) 
-5. [Features](#features) 
-6. [Tests](#tests)
-7. [Future Development](#future-development)
-8. [References](#references)
-9. [Author](#author)
+2. [Requirements](#requirements)
+3. [How to use?](#how-to-use) 
+4. [Features](#features) 
+5. [Tests](#tests)
+6. [Future Development](#future-development)
+7. [Author](#author)
 
 ---
 
 ## Motivation 
-As a data engineering project, this code currently showcases how to acquire (via web-scraping) and transform raw input data (leaving the original source unchanged) and export it to a given destination. As an ongoing project, transformed data will be uploaded to a database (completing the ETL process), then vizualized using Tableau.
+The original idea behind GetConnected–a project developed as part of the 2021 Valtech Hackathon–was to create a list of free, accessible Wi-Fi hubs available through the New York Public Library systems as well as New York Public Parks. You can learn more about the original project [here](https://docs.google.com/presentation/d/1WGnWsrTT71dQXkPMeNkUDvsj775XcF3k-BXl8jDQxYI/edit) and view the origial GitHub repository [here](https://github.com/space-isa/get-connected)
+
+The code in this repository showcases how to acquire (via web-scraping) and transform raw input data (leaving the original source unchanged) and export it to a given destination. As an exercise, the NYPL information was loaded onto a MySQL database on Amazon RDS and vizualized using Tableau (see above figure).
 
 ### Project requirements
 
@@ -42,17 +42,15 @@ As a data engineering project, this code currently showcases how to acquire (via
       ...
       ...
       ```
-
----
-
-## Solution Approach 
  
 
 ---
 
 ## Requirements
 This code was developed and tested using Python 3.8.6.
-Install: BeautifulSoup and Geopy before use.
+Install before use: 
+- BeautifulSoup 
+- Geopy
 
 ---
 
@@ -68,19 +66,10 @@ Install: BeautifulSoup and Geopy before use.
    def main(output_filename=None):
    ...
    ```
-- Seperate scripts for web-scraping: e.g., `soupify_webpage.py`, and writing to output csv file: `write_to_csv.py`. 
 
 ### Other features 
+- Seperate scripts for web-scraping: e.g., `soupify_webpage.py`, and writing to output csv file: `write_to_csv.py`. 
 
-
-## Tests 
-
-### Unit testing 
-
-
-To run tests:
-
----
 
 ## Future Development
 
@@ -88,8 +77,8 @@ To run tests:
 - Improve output file naming system: 
    - Implement code for generating failed report filenames
 - Expand functionality of `exception_handler.py`.
-
-## References
+- Adding a timeit decorator
+- Utilizing a job scheduler to regularly check and update program infomration
 
 ---
 

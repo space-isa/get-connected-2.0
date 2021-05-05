@@ -31,6 +31,7 @@ OUTPUTS
 #   Standard Python library imports
 import csv
 import sys
+import time
 
 #   Companion scripts
 from write_to_csv import write_to_csv
@@ -206,6 +207,7 @@ def main(output_filename=None):
                       output_folder=output_folder)
 
 if __name__ == "__main__":
+    date = time.strftime("%m%d%Y")
     output_folder = "../output/"
-
-    main(output_filename=sys.argv[1])
+    output_filename = "bpl_wifi_{}.csv".format(date)
+    main(output_filename)

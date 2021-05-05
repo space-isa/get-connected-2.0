@@ -68,13 +68,13 @@ if __name__ == "__main__":
     main()
 
 
-# print(full_table)
-
-# Park downhill: 'tables' is a single array with all values. 
-# It has 4 columns: park, location, wi-fi type, wi-fi povider,
-# e.g., ['Alfred E. Smith Playground', 'Playground area', 'Limited Free', 'Spectrum',...]
-# need to reshape!
-# note that parks have duplicate names but different locations. keep them all!
-# ensure order is preserved when reshaping so that websites can be added. 
-# we also need the main webpage, these are just endpoints
-# then we need to go to those endpoints and figure out if theres a bathroom!
+# Park downhill: 
+# We can now pull from csv.
+# Need to:
+#    1. Only keep 'Free' and 'Limited Free' options
+#    2. Visit each endpoint and pull: 
+#           i) SSID: (div class="info-window")
+#           ii) Active: Y/N (div class="info-window")
+#           iii) lat (div class="info-window")
+#           iv)  lon (div class="info-window")
+#           ii) whether a bathroom is available (div id = "park_facilities_side", list)

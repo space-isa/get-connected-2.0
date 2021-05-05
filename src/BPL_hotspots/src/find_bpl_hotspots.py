@@ -102,6 +102,9 @@ def pull_address_data(url=None):
             else:
                 pass
         
+        # addresses with street numbers spelled out decreases accuracy 
+        # replace with number (e.g., first --> 1st)
+        # this is done on a case-by-case basis but could be generalized
         if 'First' in street_address:
             street_address = street_address.replace("First", "1st")
         else:

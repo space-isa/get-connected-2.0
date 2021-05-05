@@ -93,7 +93,7 @@ def pull_address_data(url=None):
         #  clean address data 
         split_address = street_address.split()
         
-        stopwords = ['at', '(near', '(Near']
+        stopwords = ['at', '(near', '(Near', '(at', '(@']
         #  remove street intersection
         for stopword in stopwords:
             if stopword in split_address:
@@ -106,6 +106,8 @@ def pull_address_data(url=None):
             street_address = street_address.replace("First", "1st")
         else:
             pass
+        if 'Fourth' in street_address:
+            street_address = street_address.replace("Fourth", "4th")
         
         #  grab geolocation data
         latitude, longitude = geolocate_coordinates(street_address=street_address + ', Brooklyn')
@@ -122,9 +124,13 @@ def store_data(list_active):
     wifi_range = '300 feet'
     wifi_availability = '24/7'
     wifi_program = 'Bklyn Reach'
-    city_state = ' Brooklyn, New York '
+    city = 'Brooklyn'
+    state = 'New York'
     # create a storage container for BPL data
-    bp_libraries = {list_active[i].text: {'ADDRESS' : '',
+    bp_libraries = {list_active[i].text: {'STREET ADDRESS' : '',
+                                          'CITY' : city,
+                                          'STATE' : state,
+                                          'ZIP CODE' : '',
                                           'LATITUDE' : '',
                                           'LONGITUDE' : '',
                                           'WI-FI PROGRAM': wifi_program,
@@ -139,7 +145,8 @@ def store_data(list_active):
 
         street_address, zip_code, latitude, longitude = pull_address_data(list_active[i].a["href"])
 
-        nested_dict['ADDRESS'] = street_address + ',' + city_state + ',' + zip_code
+        nested_dict['STREET ADDRESS'] = street_address
+        nested_dict['ZIP CODE'] = zip_code 
         nested_dict['LATITUDE'] = latitude
         nested_dict['LONGITUDE'] = longitude
         nested_dict['LIBRARY WEBSITE'] = list_active[i].a["href"]
@@ -171,7 +178,10 @@ def write_data_to_csv(bp_libraries,
     #  Order and sort data into output container
     for key, val in bp_libraries.items():
         output.append([key,
-                       val['ADDRESS'],
+                       val['STREET ADDRESS'],
+                       val['CITY'],
+                       val['STATE'],
+                       val['ZIP CODE'],
                        val['LATITUDE'],
                        val['LONGITUDE'],
                        val['WI-FI PROGRAM'],

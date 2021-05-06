@@ -44,10 +44,12 @@ def compile_nypp_data():
     for i in range(len(wifi_endpoints_sorted)):
         wifi_endpoints_sorted[i][0] = nyc_parks_url + wifi_endpoints_sorted[i][0]
 
+    # only save free and limited free wifi options
     compiled_table = []
     for i in range(len(tables_sorted)):
-        new_row = tables_sorted[i] + wifi_endpoints_sorted[i]
-        compiled_table.append(new_row)
+        if tables_sorted[i][2] == 'Free' or tables_sorted[i][2] == 'Limited Free':
+            new_row = tables_sorted[i] + wifi_endpoints_sorted[i]
+            compiled_table.append(new_row)
 
     return compiled_table
 
@@ -73,8 +75,9 @@ if __name__ == "__main__":
 # Need to:
 #    1. Only keep 'Free' and 'Limited Free' options
 #    2. Visit each endpoint and pull: 
-#           i) SSID: (div class="info-window")
+#           i)  SSID: (div class="info-window")
 #           ii) Active: Y/N (div class="info-window")
 #           iii) lat (div class="info-window")
 #           iv)  lon (div class="info-window")
+#           NOTE: Need to look into incorporating Selenium to access ineractive JS elements
 #           ii) whether a bathroom is available (div id = "park_facilities_side", list)

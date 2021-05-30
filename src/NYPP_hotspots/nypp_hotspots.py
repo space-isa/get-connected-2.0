@@ -75,9 +75,11 @@ if __name__ == "__main__":
 # Need to:
 #    1. Only keep 'Free' and 'Limited Free' options
 #    2. Visit each endpoint and pull: 
+# HEY: >>> containers = page_soup.findAll("div", {"id":"park_feature"}) works!
+#       work from here to get:
 #           i)  SSID: (div class="info-window")
 #           ii) Active: Y/N (div class="info-window")
 #           iii) lat (div class="info-window")
 #           iv)  lon (div class="info-window")
-#           NOTE: Need to look into incorporating Selenium to access ineractive JS elements
-#           ii) whether a bathroom is available (div id = "park_facilities_side", list)
+#           
+# BONUS: Determine hether a bathroom is available (div id = "park_facilities_side", list)

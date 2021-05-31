@@ -16,7 +16,7 @@ A project that curates information from the web related to free Wi-Fi and libray
 ---
 
 ## Motivation 
-"Where can I get Wi-Fi to access the resources I need?" The original idea behind GetConnected–a project developed as part of the 2021 Valtech Hackathon–was to create a list of free, accessible Wi-Fi hubs available through the New York Public Library systems as well as New York Public Parks. You can learn more about the original project [here](https://docs.google.com/presentation/d/1WGnWsrTT71dQXkPMeNkUDvsj775XcF3k-BXl8jDQxYI/edit) and view the origial GitHub repository [here](https://github.com/space-isa/get-connected)
+"Where can I get Wi-Fi to access the resources I need?" The original idea behind GetConnected–a project developed as part of the 2021 Valtech Hackathon–was to create a list of free, accessible Wi-Fi hubs available through the New York Public Library systems as well as New York Public Parks. You can learn more about the original project [here](https://docs.google.com/presentation/d/1WGnWsrTT71dQXkPMeNkUDvsj775XcF3k-BXl8jDQxYI/edit) and view the origial GitHub repository [here](https://github.com/space-isa/get-connected).
 
 The code in this repository showcases how to acquire (via web-scraping) and transform raw input data (leaving the original source unchanged) and export it to a given destination. As an exercise, the NYPL information was loaded onto a MySQL database on Amazon RDS and vizualized using Tableau (see above figure).
 
@@ -53,6 +53,7 @@ This code was developed and tested using Python 3.8.6.
 Install before use: 
 - BeautifulSoup 
 - Geopy
+- Pandas
 
 ---
 

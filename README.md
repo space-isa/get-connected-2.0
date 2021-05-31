@@ -20,6 +20,8 @@ A project that curates information from the web related to free Wi-Fi and libray
 
 The code in this repository showcases how to acquire (via web-scraping) and transform raw input data (leaving the original source unchanged) and export it to a given destination. As an exercise, the NYPL information was loaded onto a MySQL database on Amazon RDS and vizualized using Tableau (see above figure).
 
+The complete dataset was compiled and displayed on an ArcGis app that you can view [here](https://www.arcgis.com/apps/instant/minimalist/index.html?appid=6cbf6c4a11b54c8190aaeb5ad1ae1896).
+
 ### Project requirements
 
 - Input
@@ -59,7 +61,14 @@ Install before use:
 --- 
 Feel free to fork this repo! 
 
-In ```/BPL_hotspots/src/``` you'll find the script ```find_bpl_hotspots.py```. Running this script will access and scrape and store data from NY Public Libraries currently participating in the [Bklyn Reach](https://www.bklynlibrary.org/reach/) Wi-Fi program.
+To scrape New York Public Library Brklyn Reach Wi-Fi Hotspots: 
+- In ```/BPL_hotspots/src/```, run: 
+     - ```find_bpl_hotspots.py``` (access, scrape, clean, and store data from NY Public Libraries currently participating in the [Bklyn Reach](https://www.bklynlibrary.org/reach/) Wi-Fi program)
+
+To scrape New York Public Park Wi-Fi Hotspots:
+- In ```/NYPP_hotspots/src/```, run: 
+    - ```find_nypp_hotspots.py``` (pulls and cleans location, Wi-Fi type and provider, as well as park websites from a master webpage)
+    - ```get_coordinates.py``` (adds latitude, longitude, and a more human-readable location to compiled data found through park websites) 
 
 ## Features 
 
@@ -76,6 +85,7 @@ In ```/BPL_hotspots/src/``` you'll find the script ```find_bpl_hotspots.py```. R
 
 ## Future Development
 
+- Expanding dataset to include other major cities in the US
 - Adding a `failed` subdirectory where failed csv files for failed data extractions can be rerouted.  
 - Improve output file naming system: 
    - Implement code for generating failed report filenames

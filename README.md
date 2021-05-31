@@ -1,7 +1,8 @@
 # get-connected-2.0
 
-A project that curates information from the web related to free Wi-Fi and libray-based programs available to the community members of Manhattan's Lower East Side.  
-![alt text](https://github.com/space-isa/get-connected-2.0/blob/main/docs/images/test-mysql-tableau-connect.png?raw=true)
+A project that compiles free New York Public Park and New York Public Library Wi-Fi hotspots available to the community members of Manhattan's Lower East Side. The complete dataset––63 public park locations and 29 libraries participating in the Brklyn Reach Program as of 05/05/2021––was curated and displayed on an ArcGis app (see figure below). You can check it out [here](https://www.arcgis.com/apps/instant/minimalist/index.html?appid=6cbf6c4a11b54c8190aaeb5ad1ae1896). 
+![alt text](https://github.com/space-isa/get-connected-2.0/blob/main/docs/images/arcgis-mobile-view.png?raw=true)
+![alt text](https://github.com/space-isa/get-connected-2.0/blob/main/docs/images/arcgis-mobile-view-click.png?raw=true)
 
 ---
 ## Table of Contents 
@@ -18,9 +19,9 @@ A project that curates information from the web related to free Wi-Fi and libray
 ## Motivation 
 "Where can I get Wi-Fi to access the resources I need?" The original idea behind GetConnected–a project developed as part of the 2021 Valtech Hackathon–was to create a list of free, accessible Wi-Fi hubs available through the New York Public Library systems as well as New York Public Parks. You can learn more about the original project [here](https://docs.google.com/presentation/d/1WGnWsrTT71dQXkPMeNkUDvsj775XcF3k-BXl8jDQxYI/edit) and view the origial GitHub repository [here](https://github.com/space-isa/get-connected).
 
-The code in this repository showcases how to acquire (via web-scraping) and transform raw input data (leaving the original source unchanged) and export it to a given destination. As an exercise, the NYPL information was loaded onto a MySQL database on Amazon RDS and vizualized using Tableau (see above figure).
+The code in this repository showcases how to acquire (via web-scraping) and transform raw input data (leaving the original source unchanged) and export it to a given destination. As an exercise, the NYPL information was loaded onto a MySQL database on Amazon RDS and vizualized directly using Tableau (see figure below).
 
-The complete dataset was compiled and displayed on an ArcGis app that you can view [here](https://www.arcgis.com/apps/instant/minimalist/index.html?appid=6cbf6c4a11b54c8190aaeb5ad1ae1896).
+![alt text](https://github.com/space-isa/get-connected-2.0/blob/main/docs/images/test-mysql-tableau-connect.png?raw=true)
 
 ### Project requirements
 

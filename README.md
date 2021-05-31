@@ -1,8 +1,7 @@
 # get-connected-2.0
 
 A project that compiles free New York Public Park and New York Public Library Wi-Fi hotspots available to the community members of Manhattan's Lower East Side. The complete dataset––63 public park locations and 29 libraries participating in the Brklyn Reach Program as of 05/05/2021––was curated and displayed on an ArcGis app (see figure below). You can check it out [here](https://www.arcgis.com/apps/instant/minimalist/index.html?appid=6cbf6c4a11b54c8190aaeb5ad1ae1896). 
-![alt text](https://github.com/space-isa/get-connected-2.0/blob/main/docs/images/arcgis-mobile-view.png?raw=true)
-![alt text](https://github.com/space-isa/get-connected-2.0/blob/main/docs/images/arcgis-mobile-view-click.png?raw=true)
+![alt text](https://github.com/space-isa/get-connected-2.0/blob/main/docs/images/arcgis-webpage-click-search.png?raw=true)
 
 ---
 ## Table of Contents 
